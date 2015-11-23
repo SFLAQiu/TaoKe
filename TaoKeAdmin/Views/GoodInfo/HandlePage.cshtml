@@ -1,0 +1,130 @@
+﻿@{
+    Layout = null;
+}
+@using LG.Utility;
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>HandlePage</title>
+    <link href="/content/css/bootstrap.min.css?v=3.0.2" rel="stylesheet" />
+    <link href="/content/css/pagination.css" rel="stylesheet" />
+    <style type="text/css">
+        .main td {
+            width:500px;
+            text-align:right;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+
+    </div>
+        <table class="main" id="ipts">
+            <tr>
+                <td>商品名称:</td>
+                <td><input type="text" class="form-control" name="Title"></td>
+            </tr>
+            <tr>
+                <td>购买地址:</td>
+                <td><input type="text" class="form-control" name="BuyUrl"></td>
+            </tr>
+            <tr>
+                <td>商品源ID:</td>
+                <td><input type="text" class="form-control" name="GoodId"></td>
+            </tr>
+            <tr>
+                <td>图片地址:</td>
+                <td><input type="text" class="form-control" name="ImgUrl"></td>
+            </tr>
+            <tr>
+                <td>原价:</td>
+                <td><input type="text" class="form-control" name="OldPrice"></td>
+            </tr>
+            <tr>
+                <td>现价:</td>
+                <td><input type="text" class="form-control" name="NowPrice"></td>
+            </tr>
+            <tr>
+                <td>商品类型:</td>
+                <td>
+                    <select class="form-control" name="Type">
+                        <option value="-1">无</option>
+                        @{
+                            var goodTypes = (List<TaoKeModel.EGoodType>)ViewBag.GoodType;
+                            foreach (var item in goodTypes) {
+                                <option value="@item.GetInt(0,false)">@item.GetEnumAttr().Text</option>
+                            }
+
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>商城来源:</td>
+                <td>
+                    <select class="form-control" name="SourceMall">
+                        <option value="-1">无</option>
+                        @{
+                            var sourceMall = (List<TaoKeModel.ESourceMall>)ViewBag.SourceMall;
+                            foreach (var item in sourceMall) {
+                                <option value="@item.GetInt(0,false)">@item.GetEnumAttr().Text</option>
+                            }
+
+                        }
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input  type="hidden" class="form-control" name="Id">
+                </td>
+                <td><button type="button" id="addbtn" class="btn btn-default">GO</button></td>
+            </tr>
+
+        </table>
+        <script type="text/javascript" src="/content/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/content/js/jquery.pagination.js"></script>
+        <script type="text/javascript" src="/content/js/vue.min.js"></script>
+        <script type="text/javascript" src="/content/js/SFLYQ.Helper.js"></script>
+        <script type="text/javascript">
+            (function () {
+                var h = SFLYQ.Helper;
+                $("#addbtn").click(function () {
+                    var action="@ViewBag.Action";
+                    var from_datas=h.SuperHander.GetFormValue($("#ipts .form-control"));
+                    console.log(from_datas);
+                    $.post("/GoodInfo/"+action+"Good/", from_datas, function (data) {
+                        if (!data) {
+                            alert("添加操作，无响应数据！！");
+                            return;
+                        }
+                        if (data["code"] == "100") {
+                            alert("成功！！");
+                            location.href = "/GoodInfo/List";
+                            return;
+                        }
+                    });
+                });
+
+                function bindDatas() {
+                    var dataJson = @Html.Raw(ViewBag.Data);
+                    if (!dataJson) return;
+                    $("#ipts input[name='Id']").val(dataJson["Id"]);
+                    $("#ipts input[name='Title']").val(dataJson["Title"]);
+                    $("#ipts input[name='BuyUrl']").val(dataJson["BuyUrl"]);
+                    $("#ipts input[name='GoodId']").val(dataJson["GoodId"]);
+                    $("#ipts input[name='NowPrice']").val(dataJson["NowPrice"]);
+                    $("#ipts input[name='OldPrice']").val(dataJson["OldPrice"]);
+                    $("#ipts input[name='ImgUrl']").val(dataJson["ImgUrl"]);
+                    $("#ipts select[name='Type']").find("option[value='" + dataJson["Type"] + "']").prop("selected",true);
+                    $("#ipts select[name='SourceMall']").find("option[value='" + dataJson["SourceMall"] + "']").prop("selected", true);
+                }
+                bindDatas();
+            })();
+
+        </script>
+</body>
+    </html>

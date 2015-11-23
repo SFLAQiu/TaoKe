@@ -1,0 +1,514 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+您 Web 项目的发布/打包进程将使用此文件。您可以通过编辑此 MSBuild 文件
+来自定义该进程的行为。若要了解与此相关的详细信息，请访问 http://go.microsoft.com/fwlink/?LinkID=208121。
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>I:\Web\TaoKe</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/LG.Utility.dll">
+      <publishTime>03/11/2015 12:01:45</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>11/15/2015 15:50:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Mvc.FixedDisplayModes.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>04/03/2014 23:23:04</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>11/15/2015 15:50:02</publishTime>
+    </File>
+    <File Include="bin/Safe.Base.DbHelper.dll">
+      <publishTime>04/03/2014 23:23:04</publishTime>
+    </File>
+    <File Include="bin/Safe.Base.DbHelper.pdb">
+      <publishTime>11/15/2015 22:23:58</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.WebRequest.dll">
+      <publishTime>07/09/2013 11:04:48</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/15/2015 15:50:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.WebHost.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/15/2015 15:50:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>11/15/2015 15:50:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>11/15/2015 15:50:02</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>11/15/2015 15:50:02</publishTime>
+    </File>
+    <File Include="bin/TaoKe.dll">
+      <publishTime>11/22/2015 23:15:59</publishTime>
+    </File>
+    <File Include="bin/TaoKe.pdb">
+      <publishTime>11/22/2015 23:15:58</publishTime>
+    </File>
+    <File Include="bin/TaoKeBLL.dll">
+      <publishTime>11/22/2015 17:47:02</publishTime>
+    </File>
+    <File Include="bin/TaoKeBLL.pdb">
+      <publishTime>11/22/2015 17:47:02</publishTime>
+    </File>
+    <File Include="bin/TaoKeDAL.dll">
+      <publishTime>11/22/2015 17:47:01</publishTime>
+    </File>
+    <File Include="bin/TaoKeDAL.pdb">
+      <publishTime>11/22/2015 17:47:01</publishTime>
+    </File>
+    <File Include="bin/TaoKeModel.dll">
+      <publishTime>11/22/2015 17:47:01</publishTime>
+    </File>
+    <File Include="bin/TaoKeModel.pdb">
+      <publishTime>11/22/2015 17:47:01</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
+      <publishTime>11/15/2015 15:50:04</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.resources.dll">
+      <publishTime>07/09/2013 11:34:42</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Net.Http.WebRequest.resources.dll">
+      <publishTime>07/09/2013 11:34:40</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Helpers.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Http.WebHost.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Mvc.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.Razor.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Deployment.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.Razor.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="bin/zh-Hans/System.Web.WebPages.resources.dll">
+      <publishTime>11/15/2015 15:50:03</publishTime>
+    </File>
+    <File Include="Content/cache/products/02ca26aaa833edfa2ca239ad0de53706.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/033ce98e588f0c6dbb9dcaf96e839a12.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/142f415fbe29c2aea418c93d3e075907.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/1b42128d85966e6e4fad29a2a0957c16.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/2ec25b530292f5ef70ead7dbc2897cb9.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/31449240332554062a550edd4da216be.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/37ad60a7bf443341de7c21c196999660.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/3a8b546ab9ef6fbe3ed52cf552a3ad85.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/3e3be6025aaf02576548d805483826c5.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/3fb27ae186cfc98f78758fa8c9c8193c.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/4047c231a3696140d3370f8c6a0a67d5.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/43a75efa04831967ed69b9356e12e80a.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/4538b6403a694b8878fb89147dfef21b.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/54d090962d7714049ec5d314582a18be.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/565f73c24eb035bf22196f64bfa2463e.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/574466cc67b7a36a42d00d4615eccc1c.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/596e9946033f3c44d7d241aaee7e4466.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/5e5046a1ff8ac041c1e9f2ccf67b9bc8.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/6091230243b14764984a74bf2935fb17.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/6676e4872838330cb832cc712f9bfc69.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/6e6b0852251bad7cf6b928b8d2118127.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/7068fc19c2b4dc8453ceea749478109d.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/74f5824f901e74a0fee6e10cdbefced6.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/776adc3c1146ddb807cf4544368220b2.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/790797f77a002a71951f8c83300ae0e7.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/79e509721ebaf0dbe9975d75ee6e1f9b.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/7b7eb191ad7458c44b7d140bc34514a3.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/7da46d1d0a7b80275357f1eacb2e7811.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/7e072e45f963e634cb775c4b324537c8.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/803d05daa1a69a5c6ad67b70026ac075.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/808d7555d71e7993009124c3b08d81ab.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/8d6987cdc380aef95ee4d516311fa51f.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/928062fa8eb1e4fcb464033fc1c2bb09.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/9f566b65c7d0ecc8da683df6e671389d.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/a012c91a70b6e873e594d8d98fb97006.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/a3e8e20fc1309852b0aa104d6a05014b.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/ad27fc3dc585484988a33c2d8e759f35.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/b1f20b7a81512f14ae0d7dbd7b7d8330.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/b99ecdfcd36aae8ed64174c3ebf76dca.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/bd042b78ea143e6e8e1068d231673d00.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/c87c7f3a6a95a709049277fccf46f951.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/c8e063eb1f5a8f038315a6f167791dbd.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/cb81560dc35753f2059ca2aaee9729d3.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/cd881e9fc339502b148fa31ca44dc57c.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/d5f111c74c7971e64d97d73bb6638e64.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/d5f9c3e2fbf152004400e1b03a3a6169.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/d88c83d4f1e5e582d443abe01e0ee1ea.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/d8a81446937d0c03f54f49fffbc047db.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/e0f2c291fdf9afd937b14296011d2a65.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/e23b51ec653c889ebea0111c6f3baf6f.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/e2572c4d10528d29296d15d7fe02eca3.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/e62c932e9527b2fbbf24e1bf7d9fb0b7.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/e698e7fb0255579465ddd34bd8b01548.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/eafe904cebb77e2ccd8a8f3cf1bc9886.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/ebe8f55be8f25f94ac06925051f72cd0.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/ec410fe5486814934d9da345d13da1b0.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/ec7653b0a1ac222397fa5c0e16a7a498.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/f7a2e4c0dbbb8feb00854e819e945bf8.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/products/fedb5a0c37f334bcc6d8e18fb2eb0df1.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/1.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/10303.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/10825.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/11039.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/11497.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/11508.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/12000.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/12226.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/12259.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/13151.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/13875.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/13901.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/14034.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/14539.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/14671.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/14686.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/14754.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/1486.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/14923.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/14989.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/15415.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/1660.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/188.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/2565.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/29.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/3390.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/39.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/4279.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/5749.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/6330.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/6864.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/8264.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/9316.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/cache/users/9603.jpg">
+      <publishTime>11/15/2015 16:04:34</publishTime>
+    </File>
+    <File Include="Content/css/bootstrap.min.css">
+      <publishTime>11/15/2015 15:59:37</publishTime>
+    </File>
+    <File Include="Content/css/mqueries.css">
+      <publishTime>11/15/2015 15:59:37</publishTime>
+    </File>
+    <File Include="Content/css/socialicious.css">
+      <publishTime>11/15/2015 15:59:37</publishTime>
+    </File>
+    <File Include="Content/css/style.css">
+      <publishTime>11/22/2015 22:00:17</publishTime>
+    </File>
+    <File Include="Content/img/avatar_grand.png">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/loader.gif">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/logo.jpg">
+      <publishTime>11/22/2015 17:17:40</publishTime>
+    </File>
+    <File Include="Content/img/logo_off.png">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/logo_v1.png">
+      <publishTime>11/22/2015 20:31:00</publishTime>
+    </File>
+    <File Include="Content/img/logo_v2.png">
+      <publishTime>11/22/2015 21:58:12</publishTime>
+    </File>
+    <File Include="Content/img/main_ico.png">
+      <publishTime>11/15/2015 17:33:36</publishTime>
+    </File>
+    <File Include="Content/img/product_list.png">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/product_list_hover.png">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/product_share.png">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/product_share_hover.png">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/sprite.png">
+      <publishTime>11/15/2015 16:00:22</publishTime>
+    </File>
+    <File Include="Content/img/tb.png">
+      <publishTime>11/15/2015 17:37:38</publishTime>
+    </File>
+    <File Include="Content/js/application.js">
+      <publishTime>11/15/2015 16:00:24</publishTime>
+    </File>
+    <File Include="Content/js/bootbox.js">
+      <publishTime>11/15/2015 16:00:24</publishTime>
+    </File>
+    <File Include="Content/js/bootstrap.min.js">
+      <publishTime>11/15/2015 16:00:24</publishTime>
+    </File>
+    <File Include="Content/js/jquery.min.js">
+      <publishTime>11/15/2015 16:00:24</publishTime>
+    </File>
+    <File Include="Content/js/jquery.placeholder.min.js">
+      <publishTime>11/15/2015 16:00:24</publishTime>
+    </File>
+    <File Include="Content/js/plugins.js">
+      <publishTime>11/15/2015 16:00:24</publishTime>
+    </File>
+    <File Include="Content/js/script.js">
+      <publishTime>11/22/2015 19:51:22</publishTime>
+    </File>
+    <File Include="Content/js/vue.min.js">
+      <publishTime>11/21/2015 17:55:22</publishTime>
+    </File>
+    <File Include="datas/goods/info.js">
+      <publishTime>11/22/2015 23:19:34</publishTime>
+    </File>
+    <File Include="datas/goods/info_1_1.js">
+      <publishTime>11/22/2015 23:19:34</publishTime>
+    </File>
+    <File Include="datas/goods/info_2_1.js">
+      <publishTime>11/22/2015 23:19:34</publishTime>
+    </File>
+    <File Include="datas/goods/info_3_1.js">
+      <publishTime>11/22/2015 23:19:34</publishTime>
+    </File>
+    <File Include="datas/goods/info_4_1.js">
+      <publishTime>11/22/2015 23:19:34</publishTime>
+    </File>
+    <File Include="datas/goods/info_all_1.js">
+      <publishTime>11/22/2015 23:19:34</publishTime>
+    </File>
+    <File Include="datas/goods/info_all_2.js">
+      <publishTime>11/22/2015 23:19:34</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/15/2015 15:50:01</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/15/2015 15:50:04</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>11/22/2015 23:27:05</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>11/15/2015 15:50:01</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/22/2015 17:01:41</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

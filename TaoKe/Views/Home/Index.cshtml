@@ -1,0 +1,387 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Z'avez déjà remarquer le nombres de balises META !?  ...  -->
+    <!-- Vérifications -->
+
+    <title>Découvrez la sélection des plus beaux articles sur Neeed.com</title>
+
+    <!-- DC.Meta -->
+
+
+    @*<meta name="DC.title" lang="fr" content="Découvrez la sélection des plus beaux articles sur Neeed.com" />
+    <meta name="DC.creator" content="56k" />
+    <meta name="DC.publisher" content="Patrice Cassard" />
+    <meta name="DC.contributor" content="Axome" />
+    <meta name="DC.subject" lang="fr" content="" />
+    <meta name="DC.description" lang="fr" content="Découvrez la sélection de 3592 articles dénichées par nos membres " />
+    <meta name="DC.type" scheme="DCTERMS.DCMIType" content="Text" />
+    <meta name="DC.format" content="text/html; charset=UTF-8" />
+    <meta name="DC.identifier" scheme="DCTERMS.URI" content="http://neeed.com/" />
+    <meta name="DC.rights" content="Copyright 2012-2015 Patrice Cassard - Neeed.com" />*@
+
+    <!-- Create the webapp -->
+    <!-- Viewport (iPhone 5 friendly) -->
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0; user-scalable=no" />
+
+    <!-- Status bar styles -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Telephone format detection -->
+    <meta name="format-detection" content="telephone=no">
+    <!-- Fullscreen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Title -->
+    <meta name="apple-mobile-web-app-title" content="Neeed">
+    <!-- Icons -->
+    <!-- Safari pinned tab icon -->
+    <link rel="mask-icon" href="/content/img/logo.svg">
+    <!-- iPhone 3GS & 2011 iPod Touch (57x57) -->
+    <link rel="apple-touch-icon" href="/content/img/app/icons/icon_57.png">
+    <link rel="apple-touch-icon-precomposed" href="/content/img/app/icons/icon_57.png">
+    <!-- iPhone iPad, iPad 2 & iPad mini (72x72) -->
+    <link rel="apple-touch-icon" sizes="72x72" href="/content/img/app/icons/icon_72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/content/img/app/icons/icon_72.png">
+    <!-- iPhone 4, 4S, 5 & 2012 iPod Touch (114x114) -->
+    <link rel="apple-touch-icon" sizes="114x114" href="/content/img/app/icons/icon_114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/content/img/app/icons/icon_114.png">
+    <!-- iPad 3 & 4 (144x144) -->
+    <link rel="apple-touch-icon" sizes="144x144" href="/content/img/app/icons/icon_144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/content/img/app/icons/icon_144.png">
+    <!-- Splash Screen -->
+    <!-- iPhone (320x460) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px)" href="/content/img/app/splash/startup_320.png">
+    <!-- iPhone 4 & 4S Retina (640x920) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="/content/img/app/splash/startup_640.png">
+    <!-- iPhone 5 Retina (640x1096) -->
+    <link rel="apple-touch-startup-image" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" href="/content/img/app/splash/startup_1096.png">
+    <!-- iPad Landscape (1024x748) -->
+    <link rel="apple-touch-startup-image" sizes="1024x748" href="/content/img/app/splash/startup_1024.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape)">
+    <!-- iPad Portrait (768x1004) -->
+    <link rel="apple-touch-startup-image" sizes="768x1004" href="/content/img/app/splash/startup_768.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait)">
+    <!-- iPad Retina Landscape (2048x1496) -->
+    <link rel="apple-touch-startup-image" sizes="2048x1496" href="/content/img/app/splash/startup_2048.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 2)">
+    <!-- iPad Retina Portrait (1536x2008) -->
+    <link rel="apple-touch-startup-image" sizes="1536x2008" href="/content/img/app/splash/startup_1536.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link href="content/css/bootstrap.min.css?v=3.0.2" rel="stylesheet">
+    <link href="content/css/socialicious.css" rel="stylesheet">
+    <link href="content/css/style.css?v=0.2" rel="stylesheet">
+    <link href="content/css/mqueries.css?v=0.2" rel="stylesheet">
+    <script src="content/js/jquery.min.js?v=1.10.2"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="content/js/html5shiv.js?v=3.6.2"></script>
+    <script src="content/js/respond.min.js?v=1.1.0"></script>
+    <![endif]-->
+</head>
+@using LG.Utility;
+<body class="">
+    <div id="playground">
+        <header id="top">
+            <div id="header1">
+                <div class="container">
+                    <div class="row">
+                        <div id="logo" class="col-xs-2 col-sm-3">
+                            <span class="logoioc"></span>
+                            <span class="logotypo"></span>
+                        </div>
+                        <div id="menu-top" class="col-xs-8 col-sm-5" >
+                            <ul class="nav nav-pills">
+                                <li class="active" style="display:none;"> <a href="/" class="login-box">。。。</a> </li>
+                                <li style="display:none;"><a href="tout-voir">。。。</a></li>
+                            </ul>
+                        </div>
+                        <div id="menu-user" class="col-xs-1 col-sm-4">
+                            <ul>
+                                <li><a href="javascript:;" style="display:none">关于我们</a></li>
+                                <li><a href="javascript:;" style="display:none"></a></li>
+                                <li class="login-box" style="display:none">
+                                    <a href="javascript:;"></a>
+                                </li>
+                                <li id="langues" style="display:none">
+                                    <span>fr</span>
+                                    <ul>
+                                        <li>
+                                            <a href="javascript:;"></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">en</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">de</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">pt</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">es</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li id="avatar-top" style="display:none;">
+                                    <a href="#">
+                                        <span class="avatar login-box">
+                                            <img src="content/img/avatar_grand.png" alt="" />
+                                        </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header2" class="container">
+                <div class="row">
+                    <div id="info-top" class="col-xs-12 col-sm-7" style="margin-top:20px;">
+                        <div class="avatar pull-left">
+                            <img src="/content/img/logo.jpg" alt="" />
+                        </div>
+                        <h1 class="toptitle">
+                            母婴特惠推荐
+                        </h1>
+
+                        <h2 class="topdesc">
+                            <span>我们极力打造一个优质母婴折扣商品推荐平台，每天不定时更新超值商品</span>
+                            <span class="links" style="display:none">
+                                <a href="javascript:;" target="_blank"></a>
+                                <a href="javascript:;" target="_blank"></a>
+                            </span>
+                        </h2>
+
+
+                    </div>
+                    <div id="partage-top" class="col-xs-0 col-sm-2 hidden-xs ">
+                        <button class="btn btn-neeed btn-lg login-box" style="display:none;">Inscription</button>
+                    </div>
+                    <div id="social-top" class="col-xs-12 col-sm-3">
+                        <div style="display:none;">
+                            <div class="social-item">
+                                <a href="javascript:;"><strong></strong><span></span></a>
+                            </div>
+                            <div class="and">&</div>
+                            <div class="social-item">
+                                <a href="javascript:;"><strong></strong><span></span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header3">
+                <div class="container">
+                    <div id="header3-top" class="row">
+                        <div id="bt-lists" class="col-xs-2 col-sm-3">
+                            <a href="#" class="ico open-list">
+                                <span class="hidden-xs open-list">筛选</span>
+                            </a>
+                            <a href="#" class="open-list pull-right hidden-xs"><span style="display:none;" class="glyphicon glyphicon-chevron-down fleche-liste"></span></a>
+                        </div>
+                        <div class="col-xs-10 col-sm-6" >
+                            <a id="bt-trier" style="display:none;" class="pull-left" href="#">过滤</a>
+                            <a id="bt-trier" style="display:none;" href="#" class="fleche-menu pull-right"><span class="glyphicon glyphicon-chevron-down fleche-filtre"></span></a>
+                        </div>
+                        <div id="nb-products" class="col-xs-0 col-sm-3 text-right hidden-xs">
+                            <span id="allgoods">共n件</span>
+                        </div>
+                    </div>
+                    <div id="header3-filters" class="row">
+                        <div id="filters" style="display:none;">
+                            <div class="clearfix">
+                                <label class="text-right"></label>
+                            </div>
+                            <div class="clearfix">
+                                <label class="text-right"></label>
+                            </div>
+                            <div class="clearfix">
+                                <label class="text-right"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="main">
+            <div class="container">
+                <div class="row">
+                    <!--类别-->
+                    <div id="lists" class="col-xs-12 col-md-3" style="display: none; z-index:999">
+                        @{var typeDatas = (List<TaoKeModel.EGoodType>)ViewBag.GoodType; }
+                        <div>
+                            <div class="scrooly">
+                                <ul id="typelist" class="nav nav-pills nav-stacked">
+                                    <li>
+                                        <a href="javascript:;" data-type="all">
+                                            <span class="badge pull-right" style="color:#ffffff; background-color:#FF5D5D;" >0</span>
+                                            所有
+                                        </a>
+                                    </li>
+                                    @foreach (var item in typeDatas) {
+                                        <li>
+                                            <a href="javascript:;" data-type="@item.GetInt(0,false)">
+                                                <span class="badge pull-right" style="color:#ffffff; background-color:#FF5D5D;">0</span>
+                                                @item.GetEnumAttr().Text
+                                            </a>
+                                        </li>
+                                    }
+                                   
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page :: user -->
+                    <div id="neeed" style="display:none;" class="col-xs-12" >
+                        <div class="big-liste row" >
+                            <div class="prod  col-xs-12 col-sm-12 product col-md-3 col-lg-3" v-for="item in goods">
+                                <a class="prod-img" href="{{item.BuyUrl==''?'javascript:;':item.BuyUrl}}" target="_blank">
+                                    <img style="max-height:250px" itemprop="image" src="{{item.ImgUrl.replace('_.webp','').replace('60x60','250x250').replace('80x80','250x250')}}" alt="{{item.Title}}" />
+                                </a>
+                                <div class="item-title ">{{item.Title}}</div>
+                                <h4>
+                                    <em><b>¥</b>{{item.NowPrice}}</em>
+                                    <span>
+                                        <i>¥{{item.OldPrice}}</i>
+                                        <br />
+                                        <u>{{item.Discount}}折</u>
+                                        <u>包邮</u>
+                                    </span>
+                                    <div class="pold site_tag" style="float: right;text-align: right;margin-right: 5px;">
+                                        <span class="pnum {{ item.SourceMall=='2'?'pnum_tmall':item.SourceMall=='1'?'pnum_taobao':'pnum_taobao'}} "></span>
+                                        <br />
+                                        <p class="pdesc">今日推荐</p>
+                                    </div>
+                                </h4>
+                                <div class="like">
+                                    <span class="bt-popliste login-box" style="display:none" data-toggle="tooltip" data-placement="bottom" title=""> </span>
+                                    <span class="bt-like login-box" data-toggle="tooltip" data-placement="bottom" title=""></span>
+                                    <span class="bt-popshare share-box" style="display:none" data-share="product" data-rel="484137" data-toggle="tooltip" data-placement="bottom" title="Partager"></span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div><!-- #neeed -->
+                </div>
+            </div>
+        </div><!-- #main -->
+    </div>
+    <div id="loading" style="display:none;">
+        <img src="content/img/loader.gif">
+    </div>
+  
+    <script type="text/javascript" src="/content/js/bootstrap.min.js?v=3.0.0"></script>
+    <script type="text/javascript" src="/content/js/jquery.placeholder.min.js?v=2.0.7"></script>
+    <script type="text/javascript" src="/content/js/plugins.js?v=0.1"></script>
+    <script type="text/javascript" src="/content/js/script.js?v=0.1"></script>
+    <script type="text/javascript" src="/content/js/bootbox.js"></script>
+    <script type="text/javascript" src="/content/js/application.js?v=0.1"></script>
+    <script type="text/javascript" src="/content/js/vue.min.js?v=0.1"></script>
+    <script type="text/javascript" src="/datas/goods/info.js?v=0.1"></script>
+    <script type="text/javascript">
+        (function () {
+            var type = "@Html.Encode(ViewBag.Type)";
+            window.goodDatas = {
+                goods: []
+            }
+            window.doGoodBind = null;
+            window.lastLoadData = {
+                type:"",
+                pageIndex: 1,
+            };
+            //隐藏筛选导航
+            function hideBox() {
+                if ($("#lists").css("display") == "block") $(".open-list").click();
+                //隐藏loading
+                $("#loading").hide();
+            }
+            //商品数据加载
+            function doLoadDatas(type, pageIndex) {
+                //加载显示
+                $("#loading").show();
+                var isSameType = lastLoadData.type == type;
+                if (isSameType && lastLoadData.pageIndex >= pageIndex) {
+                    hideBox();
+                    return;
+                }
+                var url = "/datas/goods/info_" + type + "_" + pageIndex + ".js?v" + new Date().getTime();
+                if (window.doLoadData) window.doLoadData.abort();
+                window.doLoadData=$.get(url, function (jsonDatasStr) {
+                    lastLoadData.type = type;
+                    lastLoadData.pageIndex = pageIndex;
+                    hideBox();
+                    var jsonDatas = JSON.parse(jsonDatasStr);
+                    if (isSameType) {
+                        if (jsonDatas) window.goodDatas.goods = window.goodDatas.goods.concat(jsonDatas)
+                    } else {
+                        if (jsonDatas) window.goodDatas.goods = jsonDatas;
+                    }
+                    if (!window.doGoodBind) window.doGoodBind = new Vue({
+                        el: '#neeed',
+                        data: goodDatas
+                    });
+                    if ($("#neeed").css("display") == "none") $("#neeed").css("display", "block");
+                    window.doLoadData = null;
+                });
+            }
+            //筛选
+            $("#typelist a").click(function() {
+                var thisJq = $(this);
+                var type = thisJq.attr("data-type");
+                doLoadDatas(type,1);
+                return false;
+            });
+
+            //获取类型对象
+            function getTypeInfo(type) {
+                for (var i = 0; i < window.GoodsInfo.length; i++) {
+                    var item = window.GoodsInfo[i];
+                    if (item["Type"] == type) return item;
+                }
+                return null;
+            }
+
+            //轮动加载
+            function scrollLoad() {
+                var ajaxLoading = false;
+                $(window).scroll(function () {
+                    if ($(window).scrollTop() >= $(document).height() - $(window).height() - 300) {
+                        var typeJq = $("#typelist a[data-type='" + window.lastLoadData.type + "']");
+                        var maxpage = typeJq.attr("data-pagecount");
+                        if (window.lastLoadData.pageIndex >= maxpage) {
+                            $("#loading").hide();
+                            return;
+                        }
+                        var nextPage = window.lastLoadData.pageIndex + 1;
+                        doLoadDatas(window.lastLoadData.type, nextPage);
+                    }
+                });
+            }
+
+            //绑定商品类型信息
+            function doBindGoodInfo() {
+                for (var i = 0; i < window.GoodsInfo.length; i++) {
+                    var typeJq = $("#typelist a[data-type='" + window.GoodsInfo[i]["Type"] + "']");
+                    typeJq.attr("data-pagecount", window.GoodsInfo[i]["MaxPage"]);
+                    typeJq.find(".badge").html(window.GoodsInfo[i]["AllCount"]);
+                    if (window.GoodsInfo[i]["Type"] == "all") {
+                        $("#allgoods").html(window.GoodsInfo[i]["AllCount"]+"件商品");
+                    }
+                }
+            }
+            
+            //初始化
+            doLoadDatas("all", 1);
+            doBindGoodInfo();
+            scrollLoad();
+        })();
+  
+    </script>
+</body>
+</html>

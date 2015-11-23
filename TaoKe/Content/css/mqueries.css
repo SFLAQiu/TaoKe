@@ -1,0 +1,102 @@
+
+/* large */
+@media (min-width: 1200px) {
+	
+}
+
+/* medium */
+@media (min-width: 992px) {
+	
+}
+
+/* small */
+@media (min-width: 768px) {
+	
+}
+
+
+
+
+@media (max-width: 991px) {
+	#menu-user ul li > a { padding: 5px 8px; }
+	#menu-user #avatar-top > a { padding-right: 40px; }
+
+	.bt-popliste,
+	.bt-popshare {
+		opacity: 1;
+		transform: none;
+		-webkit-transform: none;
+		transition: none;
+	}
+}
+
+
+@media (max-width: 767px) {
+	#menu-top ul { float: right; }
+	#lists{ background-color: #fff;}
+}
+
+
+
+
+
+@media (max-width: 599px) {
+	#menu-user ul li { display: none; }
+	#menu-user ul #avatar-top { display: inline-block; }
+	#menu-user ul li a { border: none; }
+	#info-top .avatar { width: 40px; height: 40px; }
+	#header2 h1 { margin-left: 48px; margin-top: -10px; font-size: 14px; padding-bottom: 4px;}
+	#header2 h2 { display: none; }
+	
+	#social-top .bt-plus { display: none; }
+	#social-top { padding-top: 0; margin-left: 45px; margin-top: -15px; margin-bottom: -10px; }
+	#social-top > div,
+	#social-top > div > div { display: block; padding: 0; margin: 0; float : left; }
+	#social-top > div > div { font-size: 11px; line-height: 1.1em; padding: 2px 0; }
+	.social-item a strong,
+	.social-item a span { display: inline; font-size: 13px; }
+	.social-item a span { padding-left: 2px; }
+	#social-top > div > .and { display: inline-block; float: left; margin-left: 5px; margin-right: 5px; margin-top: 5px; font-size: 15px; }
+	
+	.big-liste .avatar { display: none; }
+	.big-liste .prod-user { max-width: 100%; text-align: center; }
+	.big-liste .prod-user > a { margin-left: 0; }
+	
+	#lists > div{ background-color: #fff;}
+	
+	#menu-top .nav > li > a, #menu-top .nav > li.active.inactive > a{
+		font-size: 11px;
+		padding: 5px;
+		display: inline-block;
+	}
+	
+	#menu-top .nav > li{
+		display: inline-block;
+		float: left;
+	}
+	
+	#filters{
+		width: 99%;
+	}
+	
+	#filters > div > label,#filters > div > label:first-child{
+		min-width: 1px;
+		display: block;
+		text-align: left;
+		margin: 0;
+		padding: 0;
+		margin-left: 15px;
+		font-size: 1.1em;
+		font-weight: 400;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	
+	#filters a.btn{
+		margin-left:5px;
+		margin-bottom: 10px;
+	}
+	
+}
+
+

@@ -1,0 +1,199 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+@using LG.Utility;
+<head>
+    <link href="/content/css/bootstrap.min.css?v=3.0.2" rel="stylesheet" />
+    <link href="/content/css/pagination.css" rel="stylesheet" />
+    <style type="text/css">
+      
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-1">
+            <h3>商品列表</h3>
+        </div>
+        <div class="col-md-11 superhandle">
+            <a href="/GoodInfo/HandlePage/?action=add" target="_blank" class="btn btn-default">添加</a>
+            <a id="createdata" href="javascript:;"  target="_blank" class="btn btn-primary">生产静态数据</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-11" id="sel">
+            <div class="input-group" style="width:150px; float:left;">
+                <span class="input-group-addon" id="basic-addon1">商品名称:</span>
+                <input type="text" class="form-control" name="Title" style="width:150px" />
+            </div>
+            <div class="input-group" style="width:150px;float:left;">
+                <span class="input-group-addon" id="basic-addon1">商品类型:</span>
+                <select class="form-control" name="Type" style="width:150px">
+                    <option value="-1">无</option>
+                    @{
+                        var goodTypes = (List<TaoKeModel.EGoodType>)ViewBag.GoodType;
+                        foreach (var item in goodTypes) {
+                            <option value="@item.GetInt(0,false)">@item.GetEnumAttr().Text</option>
+                        }
+
+                    }
+                </select>
+            </div>
+            <div class="input-group" style="width:150px;float:left;">
+                <span class="input-group-addon" id="basic-addon1">商城来源:</span>
+                <select class="form-control" name="SourceMall" style="width:150px">
+                    <option value="-1">无</option>
+                    @{
+                        var sourceMall = (List<TaoKeModel.ESourceMall>)ViewBag.SourceMall;
+                        foreach (var item in sourceMall) {
+                            <option value="@item.GetInt(0,false)">@item.GetEnumAttr().Text</option>
+                        }
+
+                    }
+                </select>
+
+            </div>
+            <button class="btn btn-info" id="selectbtn" type="submit">查询</button>
+        </div>
+     </div>
+
+    <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-11">
+                <table id="Searchresult" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <td>
+                                商品ID
+                            </td>
+                            <td>
+                                名称
+                            </td>
+                            <td>
+                                图
+                            </td>
+                            <td>
+                                源商品ID
+                            </td>
+                            <td>
+                                地址
+                            </td>
+                            <td>
+                                原价
+                            </td>
+                            <td>
+                                现价
+                            </td>
+                            <td>
+                                商品类型
+                            </td>
+                            <td>
+                                商城来源
+                            </td>
+
+                            <td>
+                                添加时间
+                            </td>
+                            <td>
+                                操作
+                            </td>
+                        </tr>
+                    </thead>
+                    <tr v-for="todo in todos">
+                        <td>{{ todo.Id }}</td>
+                        <td>{{ todo.Title }}</td>
+                        <td><img src="{{ todo.ImgUrl }}"  style="width:50px;"/></td>
+                        <td>{{ todo.GoodId }}</td>
+                        <td><a href="{{ todo.BuyUrl }}" target="_blank">购买地址</a></td>
+                        <td>{{ todo.OldPrice }}</td>
+                        <td>{{ todo.NowPrice }}</td>
+                        <td>{{ todo.Type }}</td>
+                        <td>{{ todo.SourceMall }}</td>
+                        <td>{{ todo.AddDateTime }}</td>
+                        <td>
+                            <!-- Single button -->
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    操作 <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a href="/GoodInfo/HandlePage/?action=edit&id={{ todo.Id }}">编辑</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">删除</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                </table>
+                <div id="Pagination" class="pagination"><!-- 这里显示分页 --></div>
+            </div>
+        </div>
+            <script type="text/javascript" src="/content/js/jquery.min.js"></script>
+            <script type="text/javascript" src="/content/js/bootstrap.min.js"></script>
+            <script type="text/javascript" src="/content/js/jquery.pagination.js"></script>
+            <script type="text/javascript" src="/content/js/vue.min.js"></script>
+            <script type="text/javascript" src="/content/js/SFLYQ.Helper.js"></script>
+            <script type="text/javascript">
+                (function () {
+                    var h = SFLYQ.Helper;
+                    //此demo通过Ajax加载分页元素
+                    var initPagination = function () {
+                        var num_entries = $("#hiddenresult div.result").length;
+                        // 创建分页
+                        $("#Pagination").pagination(num_entries, {
+                            num_edge_entries: 1, //边缘页数
+                            num_display_entries: 4, //主体页数
+                            callback: pageselectCallback,
+                            items_per_page: 1, //每页显示1项
+                            prev_text: "前一页",
+                            next_text: "后一页"
+                        });
+                    };
+                    window.binddata = {
+                        todos: null
+                    };
+                    //绑定数据
+                    function DoFindDatas() {
+                        var from_datas = h.SuperHander.GetFormValue($("#sel .form-control"));
+                        $.post("/GoodInfo/GetList", from_datas, function (datas) {
+                            if (datas) {
+                                window.binddata.todos = datas;
+                            } else {
+                                window.binddata.todos = [];
+                            }
+                            if (!window.bindList) {
+                                window.bindList = new Vue({
+                                    el: '#Searchresult',
+                                    data: window.binddata
+                                })
+                            }
+                        });
+                    }
+                    function pageselectCallback(page_index, jq) {
+                        DoFindDatas();
+                        return false;
+                    }
+                    initPagination();
+                    //初始化下拉框
+                    $('.dropdown-toggle').dropdown();
+                    //查询
+                    $("#selectbtn").click(function (data) {
+                        DoFindDatas();
+                    });
+                    //生产数据
+                    $("#createdata").click(function () {
+                        $.get("/GoodInfo/CreateStaticDatas/", function (data) {
+                            if (data["code"] == "100") {
+                                alert(data["msg"]);
+                                return;
+                            }
+                            alert("生成失败！");
+                            return;
+                        })
+                    });
+                })();
+            </script>
+</body>
+</html>
