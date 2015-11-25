@@ -1576,7 +1576,16 @@ width: 20px;
     margin-top:5px;
     height: 18px;
 }
- 
- 
+
+.adleft .adbox {
+    margin-bottom:3px;
+}
+@media (max-width: 1200px) {
+    .adleft {
+        display:none;
+    }
+}
+
+
  
  

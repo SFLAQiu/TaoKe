@@ -126,6 +126,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\mqueries.css" />
     <Content Include="Content\css\socialicious.css" />
@@ -144,6 +145,7 @@
     <Content Include="Content\img\tb.png" />
     <Content Include="Content\js\application.js" />
     <Content Include="Content\js\bootbox.js" />
+    <Content Include="Content\js\bootstrap.js" />
     <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery.min.js" />
     <Content Include="Content\js\jquery.placeholder.min.js" />
