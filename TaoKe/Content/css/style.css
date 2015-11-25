@@ -222,7 +222,6 @@ h2 {
    ========================================================================== */
 
 #header1 {
-	position: fixed;
 	width: 100%;
 	z-index: 10;
 }
@@ -313,7 +312,6 @@ h2 {
 }
 
 #header2 {
-	padding-top: 83px;
 	padding-bottom: 10px;
 	border-bottom: 1px solid #eee;
 }
@@ -399,8 +397,8 @@ h2 {
 
 .headerfix #header3 {
 	position: fixed;
+    top:0px;
 	width: 100%;
-	top: 85px;
 	z-index: 10;
 }
 
