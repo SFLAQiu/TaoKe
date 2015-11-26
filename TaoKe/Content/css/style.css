@@ -1,5 +1,7 @@
 
-#header1 { z-index: 11 !important; }
+#header1 { 
+    z-index: 11 !important; 
+}
 
 /* choix de la langue */
 
@@ -314,6 +316,7 @@ h2 {
 #header2 {
 	padding-bottom: 10px;
 	border-bottom: 1px solid #eee;
+    padding-left:0px;
 }
 
 #header2 h1 {
@@ -1579,6 +1582,15 @@ width: 20px;
 
 .adleft .adbox {
     margin-bottom:3px;
+    margin-top: 2px;
+}
+.adleft {
+padding-right:1px;
+padding-left:12px;
+}
+.adright {
+padding-left:1px;
+margin-top:4px;
 }
 @media (max-width: 1200px) {
     .adleft {
