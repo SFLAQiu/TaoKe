@@ -580,7 +580,6 @@ a#bt-trier:hover {
 }
 
 
-
 /* =============================================================================
    FILTERS
    ========================================================================== */
@@ -1591,6 +1590,26 @@ padding-left:12px;
 .adright {
 padding-left:1px;
 margin-top:4px;
+}
+
+.Nicon {
+    width: 31px;
+    position: absolute;
+    right: 40px; 
+    top: 0;
+    overflow: hidden;
+    text-indent: -999px;
+    line-height:39px;
+}
+.NI_new {
+    background: url(/content/img/new.png?20151127) no-repeat;
+}
+.NI_hot {
+    background: url(/content/img/hot.png?20151127) no-repeat;
+}
+.cur{
+    box-shadow: 0 0 13px #c3c3c3;
+    border: 1px solid #d9d9d9;
 }
 @media (max-width: 1200px) {
     .adleft {

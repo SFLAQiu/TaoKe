@@ -1,10 +1,9 @@
 
 !function ($) {
 	$(document).ready(function () {
-		var rupture = 122;
-		
+	  
 		function recalcHeight() {
-			$('#lists > div').height(parseInt($(window).height()) - rupture + 70);
+			$('#lists > div').height(parseInt($(window).height()));
 			$('.scrooly').scrooly('resize');
 		}
 		
@@ -50,20 +49,17 @@
 
 		// header3 fixed ou pas?
 		$(window).on('load scroll', function() {
-			
-			// header3
+		    var rupture = $("#header1").height() + $("#header2").height() + $("#header3").height();
 			var scrollTop = $(window).scrollTop();
 			if( scrollTop>rupture )
 				$('body:not(.headerfix)').addClass('headerfix');
 			else {
 				$('body.headerfix').removeClass('headerfix');
 			}
-			
-			// fixed lists
 			if (scrollTop > rupture)
-				jQuery('#lists > div').css('top', scrollTop - rupture);
+			    $('#lists > div').css("top", scrollTop - rupture + $("#header3").height() - 35);
 			else
-				jQuery('#lists > div').css('top', 0);
+			    $('#lists > div').css("top", 0);
 			
 		});
 

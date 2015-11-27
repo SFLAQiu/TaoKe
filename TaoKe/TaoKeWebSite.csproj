@@ -131,6 +131,8 @@
     <Content Include="Content\css\mqueries.css" />
     <Content Include="Content\css\socialicious.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\hot.png" />
+    <Content Include="Content\img\new.png" />
     <Content Include="Content\img\logo.jpg" />
     <Content Include="Content\img\avatar_grand.png" />
     <Content Include="Content\img\loader.gif" />

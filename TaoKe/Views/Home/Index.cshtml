@@ -154,7 +154,7 @@
             </div>
             <div id="header2" class="container">
                 <div class="row"  style="margin:2px 20px;">
-                    <div class="adleft col-lg-4">
+                    <div id="adleft" class="adleft col-lg-4">
                         <div class="adbox">
                             <img src="http://gtms04.alicdn.com/tps/i4/TB1V0qEKFXXXXb7XFXXQO4D5VXX-440-180.jpg" />
                         </div>
@@ -297,37 +297,40 @@
                     </div>
 
                     <!-- Page :: user -->
-                    <div id="neeed" style="display:none;" class="col-xs-12" >
-                        <div class="big-liste row" >
-                            <div class="prod  col-xs-12 col-sm-12 product col-md-3 col-lg-3" v-for="item in goods">
-                                <a class="prod-img" href="{{item.BuyUrl==''?'javascript:;':item.BuyUrl}}" target="_blank">
-                                    <img style="max-height:250px" itemprop="image" src="{{item.ImgUrl.replace('_.webp','').replace('60x60','250x250').replace('80x80','250x250')}}" alt="{{item.Title}}" />
-                                </a>
-                                <div class="item-title ">{{item.Title}}</div>
-                                <h4>
-                                    <em><b>¥</b>{{item.NowPrice}}</em>
-                                    <span>
-                                        <i>¥{{item.OldPrice}}</i>
-                                        <br />
-                                        <u>{{item.Discount}}折</u>
-                                        <u>包邮</u>
-                                    </span>
-                                    <div class="pold site_tag" style="float: right;text-align: right;margin-right: 5px;">
-                                        <span class="pnum {{ item.SourceMall=='2'?'pnum_tmall':item.SourceMall=='1'?'pnum_taobao':'pnum_taobao'}} "></span>
-                                        <br />
-                                        <p class="pdesc">今日推荐</p>
-                                    </div>
-                                </h4>
-                                <div class="like">
-                                    <span class="bt-popliste login-box" style="display:none" data-toggle="tooltip" data-placement="bottom" title=""> </span>
-                                    <span class="bt-like login-box" data-toggle="tooltip" data-placement="bottom" title=""></span>
-                                    <span class="bt-popshare share-box" style="display:none" data-share="product" data-rel="484137" data-toggle="tooltip" data-placement="bottom" title="Partager"></span>
+                    <div id="neeed" style="display:none;position:relative;" class="col-xs-12" >
+                            <div class="big-liste row">
+                                <div class="prod  col-xs-12 col-sm-12 product col-md-3 col-lg-3" v-for="item in goods">
+                                    <a href="{{item.BuyUrl==''?'javascript:;':item.BuyUrl}}" target="_blank">
+                                        <img style="max-height:250px" itemprop="image" src="{{item.ImgUrl.replace('_.webp','').replace('60x60','250x250').replace('80x80','250x250')}}" alt="{{item.Title}}" />
+                                        <div class="item-title ">{{item.Title}}</div>
+                                        <h4>
+                                            <em><b>¥</b>{{item.NowPrice}}</em>
+                                            <span>
+                                                <i>¥{{item.OldPrice}}</i>
+                                                <br />
+                                                <u>{{item.Discount}}折</u>
+                                                <u>包邮</u>
+                                            </span>
+                                            <div class="pold site_tag" style="float: right;text-align: right;margin-right: 5px;">
+                                                <span class="pnum {{ item.SourceMall=='2'?'pnum_tmall':item.SourceMall=='1'?'pnum_taobao':'pnum_taobao'}} "></span>
+                                                <br />
+                                                <p class="pdesc">今日推荐</p>
+                                            </div>
+                                        </h4>
+                                        <div class="like" style="display:none;">
+                                            <span class="bt-popliste login-box" style="display:none" data-toggle="tooltip" data-placement="bottom" title=""> </span>
+                                            <span class="bt-like login-box" data-toggle="tooltip" data-placement="bottom" title=""></span>
+                                            <span class="bt-popshare share-box" style="display:none" data-share="product" data-rel="484137" data-toggle="tooltip" data-placement="bottom" title="Partager"></span>
+                                        </div>
+                                        <div class="row Nicon">
+                                            <div class="NI_new col-lg-6">新</div>
+                                            <div class="NI_hot col-lg-6">hot</div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
-
-
-                        </div>
-                    </div><!-- #neeed -->
+                    </div>
+                    <!-- #neeed -->
                 </div>
             </div>
         </div><!-- #main -->
@@ -435,6 +438,14 @@
                     }
                 }
             }
+            //效果绑定
+            $("#adleft .adbox").hover(function () {
+                var thisJq = $(this);
+                thisJq.addClass("cur");
+            }, function () {
+                var thisJq = $(this);
+                thisJq.removeClass("cur");
+            });
             
             //初始化
             doLoadDatas("all", 1);
