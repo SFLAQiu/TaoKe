@@ -122,7 +122,7 @@ h1 {
 }
 
 .toptitle {
-	color: #777;
+	color:#ff69b4;
 }
 
 h2 {
@@ -232,9 +232,7 @@ h2 {
 	background-color: #fff;
 	z-index: 10;
 	position: relative;
-	border-bottom: 1px solid #eee;
 	padding-top: 20px;
-	padding-bottom: 12px;
 }
 
 #logo {
@@ -697,16 +695,16 @@ a#bt-trier:hover {
 #lists .nav > li > a {
 	padding-left: 34px;
 	background-color: #F3F1F1;
-	color: #888;
+	color: #ff69b4;
 	border: 1px solid #eee;
 	padding-top: 6px;
 	padding-bottom: 6px;
 }
 
 #lists .nav > li > a:hover {
-	color: #fff;
-	background-color: #777;
-	border: 1px solid #777;
+	color: #ff69b4;
+	background-color:#E4DFDF;
+	border: 1px solid #E4DFDF;
 }
 
 #lists .nav > li > a:hover .badge {
@@ -1476,9 +1474,10 @@ a.url_edit:hover {
     font-weight: normal;
 }
  .prod h4 em {
-    color: #f60;
+    color: #ff69b4;
     font: 25px/36px Arial;
     float: left;
+    margin-left: 4px;
 }
  .prod h4 em b {
 font-family: "Microsoft Yahei",Arial;
@@ -1577,6 +1576,8 @@ width: 20px;
     margin: 0 auto;
     margin-top:5px;
     height: 18px;
+   color:#333;
+   text-align:center;
 }
 
 .adleft .adbox {
@@ -1595,7 +1596,7 @@ margin-top:4px;
 .Nicon {
     width: 31px;
     position: absolute;
-    right: 40px; 
+    right: 30px; 
     top: 0;
     overflow: hidden;
     text-indent: -999px;
@@ -1608,9 +1609,39 @@ margin-top:4px;
     background: url(/content/img/hot.png?20151127) no-repeat;
 }
 .cur{
-    box-shadow: 0 0 13px #c3c3c3;
+    box-shadow: 0 0 4px #c3c3c3;
     border: 1px solid #d9d9d9;
 }
+.navbox li{
+    margin-left:1px;
+}
+.topdesc {
+    color:#F2489E;
+}
+.navbarbox {
+    margin-bottom:0px !important;
+    font-size: 14px;
+    font-weight: bold;
+}
+.top-logo {
+    position:relative;
+}
+.top-logo .logo-left{
+    position:absolute;
+    right:0px;
+    text-align:right;
+}
+.footbox {
+    border-top:1px solid #f2f2f0;
+    margin:0 auto;
+    text-align:center;
+}
+.goodinfo {
+    border:1px solid #f2f2f0;
+    padding:2px 2px;
+    overflow:hidden;
+}
+
 @media (max-width: 1200px) {
     .adleft {
         display:none;

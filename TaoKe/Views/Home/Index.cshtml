@@ -68,7 +68,7 @@
     <!-- iPad Retina Portrait (1536x2008) -->
     <link rel="apple-touch-startup-image" sizes="1536x2008" href="/content/img/app/splash/startup_1536.png" media="screen and (min-device-width : 481px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio: 2)">
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
-    <link href="content/css/bootstrap.min.css?v=3.0.2" rel="stylesheet">
+    <link href="content/css/bootstrap.css?v=3.0.22" rel="stylesheet">
     <link href="content/css/socialicious.css" rel="stylesheet">
     <link href="content/css/style.css?v=0.2" rel="stylesheet">
     <link href="content/css/mqueries.css?v=0.2" rel="stylesheet">
@@ -86,15 +86,18 @@
         <header id="top">
             <div id="header1">
                 <div class="container">
-                    <div class="row">
+                    <div class="top-logo row">
                          <div id="logo" class="col-xs-2 col-lg-3">
                             <span class="logoioc"></span>
                             <span class="logotypo"></span>
                         </div>
+                        <div  class="col-xs-8 col-lg-7 logo-left">
+                            <img src="/Content/img/zp.png"  />
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <nav class="navbar navbar-default">
+                            <nav class="navbarbox navbar navbar-default">
                                 <div class="container-fluid">
                                     <!-- Brand and toggle get grouped for better mobile display -->
                                     <div class="navbar-header">
@@ -104,42 +107,41 @@
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                         </button>
-                                        <a class="navbar-brand" href="#">首页</a>
+                                        <a class="navbar-brand" href="/">首页</a>
                                     </div>
 
                                     <!-- Collect the nav links, forms, and other content for toggling -->
-                                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <div class="navbox collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                         <ul class="nav navbar-nav">
-                                            <li class="active"><a href="#">9块9疯抢 <span class="sr-only">(current)</span></a></li>
+                                            <li class="active"><a href="#" data-toggle="dropdown" varia-haspopup="true" aria-expanded="false">今日特卖<span class="sr-only">(current)</span></a></li>
+                                            <li><a href="#" data-toggle="dropdown" varia-haspopup="true" aria-expanded="false">9.9疯抢<span class="sr-only">(current)</span></a></li>
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">直通<span class="caret"></span></a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">传送门<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DJ6gsCuClzPgcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMdTrZOwaOOI%2Fxq3IhSJN6GSh8Og6JueakOloDNdwB1ZS7lWBbU9O3%2Bkev%2BD8irYy2o7LAa3DUrM2zt5vEinufIW9AmARIwX9K2poXPj9j3Ftsd%2B%2Ff4Fhw9Ypqc3O%2F4tafZwIqRHwxvj3nDWCSR8SND%2BiZ%2BQMlGz6FQ%3D%3D"  target="_blank">天猫母婴</a></li>
-                                                    <li><a href="#">Another action</a></li>
-                                                    <li><a href="#">Something else here</a></li>
+                                                    <li><a href="http://s.click.taobao.com/t?e=m%3D2%26s%3DJ6gsCuClzPgcQipKwQzePCperVdZeJviK7Vc7tFgwiFRAdhuF14FMdTrZOwaOOI%2Fxq3IhSJN6GSh8Og6JueakOloDNdwB1ZS7lWBbU9O3%2Bkev%2BD8irYy2o7LAa3DUrM2zt5vEinufIW9AmARIwX9K2poXPj9j3Ftsd%2B%2Ff4Fhw9Ypqc3O%2F4tafZwIqRHwxvj3nDWCSR8SND%2BiZ%2BQMlGz6FQ%3D%3D" target="_blank">天猫母婴特卖</a></li>
+                                                    <li><a href="http://www.mia.com/" target="_blank">蜜芽特卖</a></li>
+                                                    <li><a href="http://kid.vip.com/" target="_blank">唯品会特卖</a></li>
+                                                    <li><a href="http://baby.jd.com/" target="_blank">京东母婴特卖</a></li>
                                                     <li role="separator" class="divider"></li>
-                                                    <li><a href="#">Separated link</a></li>
-                                                    <li role="separator" class="divider"></li>
-                                                    <li><a href="#">One more separated link</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
-                                        <form class="navbar-form navbar-left" role="search">
+                                        <form class="navbar-form navbar-left" role="search" style="display:none;">
                                             <div class="form-group">
                                                 <input type="text" class="form-control" placeholder="搜索商品" />
                                             </div>
                                             <button type="submit" class="btn btn-default">查询</button>
                                         </form>
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="#">感恩活动</a></li>
                                             <li class="dropdown">
-                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">我们<span class="caret"></span></a>
+                                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@Html.Raw("@")我们<span class="caret"></span></a>
                                                 <ul class="dropdown-menu">
-                                                    <li><a href="#">Action</a></li>
-                                                    <li><a href="#">Another action</a></li>
-                                                    <li><a href="#">Something else here</a></li>
+                                                    <li><a href="#">用心选品，品质保证！</a></li>
                                                     <li role="separator" class="divider"></li>
-                                                    <li><a href="#">Separated link</a></li>
+                                                    <li><a href="#">客服QQ:3322424700</a></li>
+                                                    <li><a href="#">卖家报名QQ:634246137</a></li>
+                                                    <li role="separator" class="divider"></li>
+                                                    <li><a href="#">商务合作QQ:563644741</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -196,7 +198,7 @@
                 <div class="row">
                     <div id="info-top" class="col-xs-12 col-sm-7" style="margin-top:20px;">
                         <div class="avatar pull-left">
-                            <img src="/content/img/logo.jpg" alt="" />
+                            <img src="/content/img/logo_zp.png" alt="100%正品保证" />
                         </div>
                         <h1 class="toptitle">
                             母婴特惠推荐
@@ -261,12 +263,7 @@
                 </div>
             </div>
         </header>
-
-
-
-
-
-
+        <!-- #main -->
         <div id="main">
             <div class="container">
                 <div class="row">
@@ -297,162 +294,174 @@
                     </div>
 
                     <!-- Page :: user -->
-                    <div id="neeed" style="display:none;position:relative;" class="col-xs-12" >
+                    <div id="neeed" style="display:none;position:relative;min-height:500px;"  class="col-xs-12" >
                             <div class="big-liste row">
-                                <div class="prod  col-xs-12 col-sm-12 product col-md-3 col-lg-3" v-for="item in goods">
-                                    <a href="{{item.BuyUrl==''?'javascript:;':item.BuyUrl}}" target="_blank">
-                                        <img style="max-height:250px" itemprop="image" src="{{item.ImgUrl.replace('_.webp','').replace('60x60','250x250').replace('80x80','250x250')}}" alt="{{item.Title}}" />
-                                        <div class="item-title ">{{item.Title}}</div>
-                                        <h4>
-                                            <em><b>¥</b>{{item.NowPrice}}</em>
-                                            <span>
-                                                <i>¥{{item.OldPrice}}</i>
-                                                <br />
-                                                <u>{{item.Discount}}折</u>
-                                                <u>包邮</u>
-                                            </span>
-                                            <div class="pold site_tag" style="float: right;text-align: right;margin-right: 5px;">
-                                                <span class="pnum {{ item.SourceMall=='2'?'pnum_tmall':item.SourceMall=='1'?'pnum_taobao':'pnum_taobao'}} "></span>
-                                                <br />
-                                                <p class="pdesc">今日推荐</p>
+                                <div class="prod  col-xs-6 col-sm-6 product col-md-3 col-lg-3" v-for="item in goods">
+                                   <div class="goodinfo">
+                                       <a href="{{item.BuyUrl==''?'javascript:;':item.BuyUrl}}" target="_blank">
+                                           <img style="max-height:250px" itemprop="image" src="{{item.ImgUrl.replace('_.webp','').replace('60x60','250x250').replace('80x80','250x250')}}" alt="{{item.Title}}" />
+                                           <div class="item-title ">{{item.Title}}</div>
+                                           <h4>
+                                               <em><b>¥</b>{{item.NowPrice}}</em>
+                                               <span>
+                                                   <i>¥{{item.OldPrice}}</i>
+                                                   <br />
+                                                   <u>{{item.Discount}}折</u>
+                                                   <u>包邮</u>
+                                               </span>
+                                               <div class="pold site_tag" style="float: right;text-align: right;margin-right: 5px;">
+                                                   <span class="pnum {{ item.SourceMall=='2'?'pnum_tmall':item.SourceMall=='1'?'pnum_taobao':'pnum_taobao'}} "></span>
+                                                   <br />
+                                                   <p class="pdesc">今日推荐</p>
+                                               </div>
+                                           </h4>
+                                           <div class="like" style="display:none;">
+                                               <span class="bt-popliste login-box" style="display:none" data-toggle="tooltip" data-placement="bottom" title=""> </span>
+                                               <span class="bt-like login-box" data-toggle="tooltip" data-placement="bottom" title=""></span>
+                                               <span class="bt-popshare share-box" style="display:none" data-share="product" data-rel="484137" data-toggle="tooltip" data-placement="bottom" title="Partager"></span>
+                                           </div>
+                                           <div class="row Nicon">
+                                               <template v-if="item.IsToday==true">
+                                                   <div class="NI_new col-lg-6">新</div>
+                                               </template>
+                                               <template v-if="item.IsHot==true">
+                                                   <div class="NI_hot col-lg-6">hot</div>
+                                               </template>
                                             </div>
-                                        </h4>
-                                        <div class="like" style="display:none;">
-                                            <span class="bt-popliste login-box" style="display:none" data-toggle="tooltip" data-placement="bottom" title=""> </span>
-                                            <span class="bt-like login-box" data-toggle="tooltip" data-placement="bottom" title=""></span>
-                                            <span class="bt-popshare share-box" style="display:none" data-share="product" data-rel="484137" data-toggle="tooltip" data-placement="bottom" title="Partager"></span>
-                                        </div>
-                                        <div class="row Nicon">
-                                            <div class="NI_new col-lg-6">新</div>
-                                            <div class="NI_hot col-lg-6">hot</div>
-                                        </div>
-                                    </a>
+                                           </a>
+
+                                       </div>
+                                    </div>
                                 </div>
-                            </div>
+                        </div>
+                        <!-- #neeed -->
                     </div>
-                    <!-- #neeed -->
                 </div>
             </div>
-        </div><!-- #main -->
-    </div>
-    <div id="loading" style="display:none;">
-        <img src="content/img/loader.gif">
-    </div>
-  
-    <script type="text/javascript" src="/content/js/bootstrap.min.js?v=3.0.0"></script>
-    <script type="text/javascript" src="/content/js/jquery.placeholder.min.js?v=2.0.7"></script>
-    <script type="text/javascript" src="/content/js/plugins.js?v=0.1"></script>
-    <script type="text/javascript" src="/content/js/script.js?v=0.1"></script>
-    <script type="text/javascript" src="/content/js/bootbox.js"></script>
-    <script type="text/javascript" src="/content/js/application.js?v=0.1"></script>
-    <script type="text/javascript" src="/content/js/vue.min.js?v=0.1"></script>
-    <script type="text/javascript" src="/datas/goods/info.js?v=0.1"></script>
-    <script type="text/javascript">
-        (function () {
-            var type = "@Html.Encode(ViewBag.Type)";
-            window.goodDatas = {
-                goods: []
-            }
-            window.doGoodBind = null;
-            window.lastLoadData = {
-                type:"",
-                pageIndex: 1,
-            };
-            //隐藏筛选导航
-            function hideBox() {
-                if ($("#lists").css("display") == "block") $(".open-list").click();
-                //隐藏loading
-                $("#loading").hide();
-            }
-            //商品数据加载
-            function doLoadDatas(type, pageIndex) {
-                //加载显示
-                $("#loading").show();
-                var isSameType = lastLoadData.type == type;
-                if (isSameType && lastLoadData.pageIndex >= pageIndex) {
-                    hideBox();
-                    return;
+            <div class="container footbox">
+                <div class="row">
+                    <p>Copyright ©right; 2014 -2020 谢谢宝贝 thankbabe.com 版权所有</p>
+                    <p>闽ICP证070359号 厦门软件园二期望海路4号5楼 </p>
+                   </div>
+                <div class="row">
+                    <img width="80" alt="可信网站" oncontextmenu="return false;" style="border:none;" src="http://rr.knet.cn/static/images/logo/cnnic.png" /></a>
+                    <img src="http://file03.miyabaobei.com/resources/images/res/chengxin.jpg" />
+                </div>
+             </div>
+        <div id="loading" style="display:none;">
+            <img src="content/img/loader.gif">
+        </div>
+      
+        <script type="text/javascript" src="/content/js/bootstrap.min.js?v=3.0.0"></script>
+        <script type="text/javascript" src="/content/js/script.js?v=0.033"></script>
+        <script type="text/javascript" src="/content/js/vue.min.js?v=0.1"></script>
+        <script type="text/javascript" src="/datas/goods/info.js?t=@{DateTime.Now.GetTimestamp();}"></script>
+        <script type="text/javascript">
+            (function () {
+                var type = "@Html.Encode(ViewBag.Type)";
+                window.goodDatas = {
+                    goods: []
                 }
-                var url = "/datas/goods/info_" + type + "_" + pageIndex + ".js?v" + new Date().getTime();
-                if (window.doLoadData) window.doLoadData.abort();
-                window.doLoadData=$.get(url, function (jsonDatasStr) {
-                    lastLoadData.type = type;
-                    lastLoadData.pageIndex = pageIndex;
-                    hideBox();
-                    var jsonDatas = JSON.parse(jsonDatasStr);
-                    if (isSameType) {
-                        if (jsonDatas) window.goodDatas.goods = window.goodDatas.goods.concat(jsonDatas)
-                    } else {
-                        if (jsonDatas) window.goodDatas.goods = jsonDatas;
+                window.doGoodBind = null;
+                window.lastLoadData = {
+                    type:"",
+                    pageIndex: 1,
+                };
+                //隐藏筛选导航
+                function hideBox() {
+                    if ($(window).width()<997 && $("#lists").css("display") == "block") $(".open-list").click();
+                    //隐藏loading
+                    $("#loading").hide();
+                }
+                //商品数据加载
+                function doLoadDatas(type, pageIndex) {
+                    //加载显示
+                    $("#loading").show();
+                    var isSameType = lastLoadData.type == type;
+                    if (isSameType && lastLoadData.pageIndex >= pageIndex) {
+                        hideBox();
+                        return;
                     }
-                    if (!window.doGoodBind) window.doGoodBind = new Vue({
-                        el: '#neeed',
-                        data: goodDatas
-                    });
-                    if ($("#neeed").css("display") == "none") $("#neeed").css("display", "block");
-                    window.doLoadData = null;
-                });
-            }
-            //筛选
-            $("#typelist a").click(function() {
-                var thisJq = $(this);
-                var type = thisJq.attr("data-type");
-                doLoadDatas(type,1);
-                return false;
-            });
-
-            //获取类型对象
-            function getTypeInfo(type) {
-                for (var i = 0; i < window.GoodsInfo.length; i++) {
-                    var item = window.GoodsInfo[i];
-                    if (item["Type"] == type) return item;
-                }
-                return null;
-            }
-
-            //轮动加载
-            function scrollLoad() {
-                var ajaxLoading = false;
-                $(window).scroll(function () {
-                    if ($(window).scrollTop() >= $(document).height() - $(window).height() - 300) {
-                        var typeJq = $("#typelist a[data-type='" + window.lastLoadData.type + "']");
-                        var maxpage = typeJq.attr("data-pagecount");
-                        if (window.lastLoadData.pageIndex >= maxpage) {
-                            $("#loading").hide();
-                            return;
+                    var url = "/datas/goods/info_" + type + "_" + pageIndex + ".js?v" + new Date().getTime();
+                    if (window.doLoadData) window.doLoadData.abort();
+                    window.doLoadData=$.get(url, function (jsonDatasStr) {
+                        lastLoadData.type = type;
+                        lastLoadData.pageIndex = pageIndex;
+                        hideBox();
+                        var jsonDatas = JSON.parse(jsonDatasStr);
+                        if (isSameType) {
+                            if (jsonDatas) window.goodDatas.goods = window.goodDatas.goods.concat(jsonDatas)
+                        } else {
+                            if (jsonDatas) window.goodDatas.goods = jsonDatas;
                         }
-                        var nextPage = window.lastLoadData.pageIndex + 1;
-                        doLoadDatas(window.lastLoadData.type, nextPage);
-                    }
+                        if (!window.doGoodBind) window.doGoodBind = new Vue({
+                            el: '#neeed',
+                            data: goodDatas
+                        });
+                        if ($("#neeed").css("display") == "none") $("#neeed").css("display", "block");
+                        window.doLoadData = null;
+                    });
+                }
+                //筛选
+                $("#typelist a").click(function() {
+                    var thisJq = $(this);
+                    var type = thisJq.attr("data-type");
+                    doLoadDatas(type,1);
+                    return false;
                 });
-            }
 
-            //绑定商品类型信息
-            function doBindGoodInfo() {
-                for (var i = 0; i < window.GoodsInfo.length; i++) {
-                    var typeJq = $("#typelist a[data-type='" + window.GoodsInfo[i]["Type"] + "']");
-                    typeJq.attr("data-pagecount", window.GoodsInfo[i]["MaxPage"]);
-                    typeJq.find(".badge").html(window.GoodsInfo[i]["AllCount"]);
-                    if (window.GoodsInfo[i]["Type"] == "all") {
-                        $("#allgoods").html(window.GoodsInfo[i]["AllCount"]+"件商品");
+                //获取类型对象
+                function getTypeInfo(type) {
+                    for (var i = 0; i < window.GoodsInfo.length; i++) {
+                        var item = window.GoodsInfo[i];
+                        if (item["Type"] == type) return item;
+                    }
+                    return null;
+                }
+
+                //轮动加载
+                function scrollLoad() {
+                    var ajaxLoading = false;
+                    $(window).scroll(function () {
+                        if ($(window).scrollTop() >= $(document).height() - $(window).height() - 300) {
+                            var typeJq = $("#typelist a[data-type='" + window.lastLoadData.type + "']");
+                            var maxpage = typeJq.attr("data-pagecount");
+                            if (window.lastLoadData.pageIndex >= maxpage) {
+                                $("#loading").hide();
+                                return;
+                            }
+                            var nextPage = window.lastLoadData.pageIndex + 1;
+                            doLoadDatas(window.lastLoadData.type, nextPage);
+                        }
+                    });
+                }
+
+                //绑定商品类型信息
+                function doBindGoodInfo() {
+                    for (var i = 0; i < window.GoodsInfo.length; i++) {
+                        var typeJq = $("#typelist a[data-type='" + window.GoodsInfo[i]["Type"] + "']");
+                        typeJq.attr("data-pagecount", window.GoodsInfo[i]["MaxPage"]);
+                        typeJq.find(".badge").html(window.GoodsInfo[i]["AllCount"]);
+                        if (window.GoodsInfo[i]["Type"] == "all") {
+                            $("#allgoods").html(window.GoodsInfo[i]["AllCount"]+"件商品");
+                        }
                     }
                 }
-            }
-            //效果绑定
-            $("#adleft .adbox").hover(function () {
-                var thisJq = $(this);
-                thisJq.addClass("cur");
-            }, function () {
-                var thisJq = $(this);
-                thisJq.removeClass("cur");
-            });
-            
-            //初始化
-            doLoadDatas("all", 1);
-            doBindGoodInfo();
-            scrollLoad();
-        })();
-  
-    </script>
-</body>
-</html>
+                //效果绑定
+                $("#adleft .adbox").hover(function () {
+                    var thisJq = $(this);
+                    thisJq.addClass("cur");
+                }, function () {
+                    var thisJq = $(this);
+                    thisJq.removeClass("cur");
+                });
+
+                //初始化
+                doLoadDatas("all", 1);
+                doBindGoodInfo();
+                scrollLoad();
+            })();
+
+        </script>
+    </body>
+    </html>

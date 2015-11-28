@@ -92,7 +92,7 @@ namespace TaoKeBLL {
         public void DoCreateGroupByType(List<MGoodInfo> datas, out string msg) {
             msg = string.Empty;
             if (datas == null || datas.Count <= 0) return;
-            var groupDatas = datas.GroupBy(d => d.Type);
+            var groupDatas = datas.OrderBy(d => d.Type).ThenByDescending(d => d.AddDateTime).GroupBy(d => d.Type);
             StringBuilder createMsg = new StringBuilder();
             //根据类型分页生产
             var pageSize = 20;
@@ -142,7 +142,7 @@ namespace TaoKeBLL {
             StringBuilder createMsg = new StringBuilder();
             var dataCount = datas.Count();
             var pageCount = (datas.Count() + pageSize - 1) / pageSize;
-            datas = datas.OrderBy(d => d.AddDateTime).ToList();
+            datas = datas.OrderByDescending(d => d.AddDateTime).ToList();
             createMsg.Append("=>生成:[所有],总页数:{0} \r\n".FormatStr(pageCount));
             for (int i = 1; i <= pageCount; i++) {
                 var pageDatas = LinqHelper.GetIenumberable(datas, null, null, pageSize, i, out dataCount);

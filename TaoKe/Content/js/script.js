@@ -4,7 +4,7 @@
 	  
 		function recalcHeight() {
 			$('#lists > div').height(parseInt($(window).height()));
-			$('.scrooly').scrooly('resize');
+			//$('.scrooly').scrooly('resize');
 		}
 		
 		// menu langue
@@ -130,7 +130,7 @@
 				$('.flw-list > .userlist_box').removeClass('col-sm-3').addClass('col-sm-4');
 				
 				recalcHeight();
-				$('.scrooly').scrooly('resize');
+				//$('.scrooly').scrooly('resize');
 			}
 
 			return false;
@@ -181,11 +181,11 @@
 		
 		
 		
-		$('.scrooly').scrooly({
-			step: 15,
-			opacity: 0.5,
-			speed: 200
-		});
+		//$('.scrooly').scrooly({
+		//	step: 15,
+		//	opacity: 0.5,
+		//	speed: 200
+		//});
 
 		$(window).on('resize', function() {
 			$('#filters:visible').hide();

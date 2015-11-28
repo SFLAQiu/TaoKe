@@ -44,6 +44,15 @@ namespace TaoKeModel {
         /// </summary>
         public string ImgUrl { get; set; }
         /// <summary>
+        /// 是否是今日
+        /// </summary>
+        public bool IsToday {
+            get {
+                if (AddDateTime.Date.CompareTo(DateTime.Now.Date) >= 0) return true;
+                return false;
+            }
+        }
+        /// <summary>
         /// 折扣
         /// </summary>
         public decimal Discount{
