@@ -69,7 +69,13 @@ namespace TaoKeModel {
             get;
             set;
         }
-                
+        /// <summary>
+        /// 是否热门
+        /// </summary>
+        public bool IsHot {
+            get;
+            set;
+        }
 
     }
 
@@ -86,6 +92,10 @@ namespace TaoKeModel {
         /// 来源商城
         /// </summary>
         public ESourceMall? SourceMall { get; set; }
+        /// <summary>
+        /// 是不是热门
+        /// </summary>
+        public int IsHot { get; set; }
     }
 
     public enum ESourceMall {

@@ -23,11 +23,11 @@
         <div class="col-md-1"></div>
         <div class="col-md-11" id="sel">
             <div class="input-group" style="width:150px; float:left;">
-                <span class="input-group-addon" id="basic-addon1">商品名称:</span>
+                <span class="input-group-addon">商品名称:</span>
                 <input type="text" class="form-control" name="Title" style="width:150px" />
             </div>
             <div class="input-group" style="width:150px;float:left;">
-                <span class="input-group-addon" id="basic-addon1">商品类型:</span>
+                <span class="input-group-addon">商品类型:</span>
                 <select class="form-control" name="Type" style="width:150px">
                     <option value="-1">无</option>
                     @{
@@ -40,7 +40,7 @@
                 </select>
             </div>
             <div class="input-group" style="width:150px;float:left;">
-                <span class="input-group-addon" id="basic-addon1">商城来源:</span>
+                <span class="input-group-addon">商城来源:</span>
                 <select class="form-control" name="SourceMall" style="width:150px">
                     <option value="-1">无</option>
                     @{
@@ -50,6 +50,15 @@
                         }
 
                     }
+                </select>
+
+            </div>
+            <div class="input-group" style="width:150px;float:left;">
+                <span class="input-group-addon">热门:</span>
+                <select class="form-control" name="IsHot" style="width:150px">
+                    <option value="-1">全部</option>
+                    <option value="1">是</option>
+                    <option value="0">否</option>
                 </select>
 
             </div>
@@ -90,7 +99,9 @@
                             <td>
                                 商城来源
                             </td>
-
+                            <td>
+                                热门
+                            </td>
                             <td>
                                 添加时间
                             </td>
@@ -109,6 +120,7 @@
                         <td>{{ todo.NowPrice }}</td>
                         <td>{{ todo.Type }}</td>
                         <td>{{ todo.SourceMall }}</td>
+                        <td>{{ todo.IsHot }}</td>
                         <td>{{ todo.AddDateTime }}</td>
                         <td>
                             <!-- Single button -->
@@ -137,12 +149,13 @@
             <script type="text/javascript" src="/content/js/SFLYQ.Helper.js"></script>
             <script type="text/javascript">
                 (function () {
+                    window.pageCount = 0;
+                    var isFirst = true;
                     var h = SFLYQ.Helper;
                     //此demo通过Ajax加载分页元素
                     var initPagination = function () {
-                        var num_entries = $("#hiddenresult div.result").length;
                         // 创建分页
-                        $("#Pagination").pagination(num_entries, {
+                        $("#Pagination").pagination(window.pageCount, {
                             num_edge_entries: 1, //边缘页数
                             num_display_entries: 4, //主体页数
                             callback: pageselectCallback,
@@ -155,11 +168,13 @@
                         todos: null
                     };
                     //绑定数据
-                    function DoFindDatas() {
+                    function DoFindDatas(page_index) {
+                        if (!page_index) page_index = 1;
                         var from_datas = h.SuperHander.GetFormValue($("#sel .form-control"));
-                        $.post("/GoodInfo/GetList", from_datas, function (datas) {
-                            if (datas) {
-                                window.binddata.todos = datas;
+                        $.post("/GoodInfo/GetList?p=" + page_index, from_datas, function (jonsDatas) {
+                            window.pageCount = jonsDatas["pageCount"];
+                            if (jonsDatas) {
+                                window.binddata.todos = jonsDatas["datas"];
                             } else {
                                 window.binddata.todos = [];
                             }
@@ -169,17 +184,23 @@
                                     data: window.binddata
                                 })
                             }
+                            if (isFirst) initPagination();
                         });
                     }
                     function pageselectCallback(page_index, jq) {
-                        DoFindDatas();
+                        if (isFirst) {
+                            isFirst = false;
+                            return false;
+                        }
+                        DoFindDatas(page_index+1);
                         return false;
                     }
-                    initPagination();
+                    DoFindDatas();
                     //初始化下拉框
                     $('.dropdown-toggle').dropdown();
                     //查询
                     $("#selectbtn").click(function (data) {
+                        isFirst = true;
                         DoFindDatas();
                     });
                     //生产数据

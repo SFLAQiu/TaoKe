@@ -11,7 +11,7 @@ namespace TaoKeDAL {
     
     public class DGoodInfo {
         private SQLHelper _DB = DBHelper.GetTaoKeDatasDB();
-        private string _Field = "Id,Title,NowPrice,OldPrice,Type,SourceMall,AddDateTime,GoodId,ImgUrl,BuyUrl";
+        private string _Field = "Id,Title,NowPrice,OldPrice,Type,SourceMall,AddDateTime,GoodId,ImgUrl,BuyUrl,IsHot";
         /// <summary>
         /// 获取数据集合
         /// </summary>
@@ -94,6 +94,14 @@ FROM GoodInfo
                 });
                 if (!isNeedAnd) isNeedAnd = true;
             }
+            if (search.IsHot>=0) {
+                if (isNeedAnd) whereSql.Append(" AND ");
+                whereSql.Append("ISNULL(IsHot,0)=@IsHot");
+                parames.Add(new SqlParameter("@IsHot", search.IsHot) {
+                    DbType = DbType.Boolean
+                });
+                if (!isNeedAnd) isNeedAnd = true;
+            }
             return whereSql.ToString();
         }
         /// <summary>
@@ -123,8 +131,8 @@ WHERE id=@Id
             id = 0;
             if (model == null) return false;
             var str = @"
-INSERT INTO GoodInfo(Title,NowPrice,OldPrice,Type,SourceMall,AddDateTime,GoodId,ImgUrl,BuyUrl) 
-VALUES (@Title,@NowPrice,@OldPrice,@Type,@SourceMall,@AddDateTime,@GoodId,@ImgUrl,@BuyUrl)
+INSERT INTO GoodInfo(Title,NowPrice,OldPrice,Type,SourceMall,AddDateTime,GoodId,ImgUrl,BuyUrl,@IsHot) 
+VALUES (@Title,@NowPrice,@OldPrice,@Type,@SourceMall,@AddDateTime,@GoodId,@ImgUrl,@BuyUrl,IsHot)
 SELECT SCOPE_IDENTITY();
 ";
             SqlParameter[] parames ={
@@ -136,7 +144,8 @@ SELECT SCOPE_IDENTITY();
                 new SqlParameter("@AddDateTime",model.AddDateTime){ DbType=DbType.DateTime},
                 new SqlParameter("@GoodId",model.GoodId){ DbType=DbType.String},
                 new SqlParameter("@ImgUrl",model.ImgUrl){ DbType=DbType.String},
-                 new SqlParameter("@BuyUrl",model.BuyUrl){ DbType=DbType.String}
+                new SqlParameter("@BuyUrl",model.BuyUrl){ DbType=DbType.String},
+                new SqlParameter("@IsHot",model.IsHot){ DbType=DbType.Boolean}
             };
             id = _DB.ExecuteScalar(str, parames).GetInt(0, false);
             return id > 0;
@@ -158,7 +167,8 @@ SET
     SourceMall=@SourceMall,
     GoodId=@GoodId,
     ImgUrl=@ImgUrl,
-    BuyUrl=@BuyUrl
+    BuyUrl=@BuyUrl,
+    IsHot=@IsHot
 WHERE Id=@Id
 ";
             SqlParameter[] parames ={
@@ -170,7 +180,8 @@ WHERE Id=@Id
                 new SqlParameter("@SourceMall",model.SourceMall){ DbType=DbType.Int32},
                 new SqlParameter("@GoodId",model.GoodId){ DbType=DbType.String},
                 new SqlParameter("@ImgUrl",model.ImgUrl){ DbType=DbType.String},
-                new SqlParameter("@BuyUrl",model.BuyUrl){ DbType=DbType.String}
+                new SqlParameter("@BuyUrl",model.BuyUrl){ DbType=DbType.String},
+                new SqlParameter("@IsHot",model.IsHot){ DbType=DbType.Boolean}
             };
             return _DB.ExecuteNonQuery(str, parames)>0;
         }

@@ -106,7 +106,7 @@ if (typeof SFLYQ == 'undefined') {
         for (var i = 0; i < lengthNum; i++) {
             var itemJq=inputJqs.eq(i)
             if(!itemJq) continue;
-            var name=itemJq.attr("name");
+            var name = itemJq.attr("name");
             var value=itemJq.val();
             if(!name) continue;
             parameObj[name]=value;
@@ -141,13 +141,16 @@ if (typeof SFLYQ == 'undefined') {
                 var value=radiosJq.filter(":checked").val();
                 parames[name]=value;
                 //tagJqs.remove(radiosJq);
-            }else if((tagName=="INPUT" || tagName=="TEXTAREA")){
-                var value=itemJq.val();
-                parames[name]=value;
+            }else if (tagName == "INPUT" && typeName == "checkbox") {
+                var value = itemJq.prop("checked");
+                parames[name] = value;
             }else if(tagName=="SELECT"){
                 var selOption=itemJq.find("option:selected");
                 var value=selOption.val();
                 parames[name]=value;
+            } else if ((tagName == "INPUT" || tagName == "TEXTAREA")) {
+                var value = itemJq.val();
+                parames[name] = value;
             }
         }
         return parames;

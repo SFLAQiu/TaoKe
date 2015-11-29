@@ -24,12 +24,21 @@ namespace TaoKeAdmin.Controllers {
             var bll = new BGoodInfo();
             var pageSize = 20;
             var pageIndex = Request.GetQ("p").GetInt(0, false);
-            long dateCount = 0;
-            var datas = bll.GetList(pageSize, pageIndex, out dateCount, search, new OrderBy { 
+            long dataCount = 0;
+            int pageCount = 0;
+            var datas = bll.GetList(pageSize, pageIndex, out dataCount, search, new OrderBy { 
                  IsAsc=false,
                  Name = "AddDateTime"
+            },new OrderBy { 
+                 IsAsc=false,
+                 Name = "IsHot"
             });
-            return Json(bll.GetShowDatas(datas)??new List<object>(), JsonRequestBehavior.AllowGet);
+            pageCount = (dataCount.GetInt(0,false) + pageSize - 1) / pageSize;
+            return Json(new {
+                pageIndex=pageIndex,
+                pageCount=pageCount,
+                datas = bll.GetShowDatas(datas) ?? new List<object>()
+            }, JsonRequestBehavior.AllowGet);
         }
 
         /// <summary>

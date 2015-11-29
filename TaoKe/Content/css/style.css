@@ -461,6 +461,7 @@ h2 {
 
 #bt-lists a.ico span {
 	margin-left: 33px;
+    color: #ff69b4;
 }
 
 #bt-lists a .openned-list  {
@@ -1568,7 +1569,7 @@ width: 20px;
 
 
 .item-title {
-    width: 160px;
+    width: 210px;
     overflow: hidden;
     white-space: nowrap;
     -ms-text-overflow: ellipsis;
@@ -1594,7 +1595,7 @@ margin-top:4px;
 }
 
 .Nicon {
-    width: 31px;
+    width:52px;
     position: absolute;
     right: 30px; 
     top: 0;
@@ -1602,11 +1603,24 @@ margin-top:4px;
     text-indent: -999px;
     line-height:39px;
 }
-.NI_new {
-    background: url(/content/img/new.png?20151127) no-repeat;
+.Nicon ul {
+    width:50px;
 }
-.NI_hot {
-    background: url(/content/img/hot.png?20151127) no-repeat;
+.Nicon ul li {
+    margin-right:1px;
+    float:right;
+    width:25px;
+    height:30px;
+}
+.Nicon .tag-new {
+    background-image:url(/Content/img/new.png);
+    background-size:25px 30px;
+    background-repeat:no-repeat;
+}
+.Nicon .tag-hot {
+    background-image:url(/Content/img/hot.png);
+    background-size:25px 30px;
+    background-repeat:no-repeat;
 }
 .cur{
     box-shadow: 0 0 4px #c3c3c3;
@@ -1630,6 +1644,8 @@ margin-top:4px;
     position:absolute;
     right:0px;
     text-align:right;
+    bottom:0px;
+    margin-bottom:2px;
 }
 .footbox {
     border-top:1px solid #f2f2f0;
@@ -1642,12 +1658,83 @@ margin-top:4px;
     overflow:hidden;
 }
 
+
 @media (max-width: 1200px) {
     .adleft {
         display:none;
     }
 }
 
+@media (max-width: 767px) {
+    .navbarbox {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        display:none;
+    }
+}
 
- 
- 
+#allgoods {
+    color:#ff69b4;
+}
+@media (max-width: 500px) {
+     .adright {
+        display:none;
+    }
+    .logo-left {
+        width:125px;
+    }
+    #info-top {
+        margin-left: 10px;
+    }
+    #info-top .toptitle {
+        font-size: 18px;
+    }
+    #info-top .topdesc {
+        font-size: 12px;
+        margin-left:50px;
+        padding-left: 44px;
+    }
+    #header2 h2 {
+        margin-left:0px;
+        display:block !important;
+    }
+    .NI_new {
+        background-size: 20px 25px;
+    }
+    .goodinfo .item-title {
+        text-align: left;
+        font-size: 12px;
+        word-wrap: break-word;
+        word-break:normal;
+        overflow:hidden;
+        width: 140px;
+        white-space:inherit;
+        height:35px;
+    }
+    #lists > div{ background-color: #fff;}
+    .prod {
+        padding-left:0px;
+        padding-right:2px;
+        padding-bottom:2px !important;
+    }
+    #neeed, #lists, #neeed_userlist {
+        margin-top:2px;
+    }
+    #lists {
+        padding-left:0px;
+    }
+    .Nicon {
+        right:10px;
+    }
+    .Nicon ul li{
+        height:25px;
+    }
+    .Nicon .tag-new {
+        background-size:20px 25px;
+    }
+    .Nicon .tag-hot {
+        background-size:20px 25px;
+    }
+}

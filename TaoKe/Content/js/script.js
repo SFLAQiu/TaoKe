@@ -3,7 +3,7 @@
 	$(document).ready(function () {
 	  
 		function recalcHeight() {
-			$('#lists > div').height(parseInt($(window).height()));
+		    $('#lists > div').height(parseInt($(window).innerHeight()));
 			//$('.scrooly').scrooly('resize');
 		}
 		
@@ -57,7 +57,7 @@
 				$('body.headerfix').removeClass('headerfix');
 			}
 			if (scrollTop > rupture)
-			    $('#lists > div').css("top", scrollTop - rupture + $("#header3").height() - 35);
+			    $('#lists > div').css("top", scrollTop - rupture + $("#header3").innerHeight() - 15);
 			else
 			    $('#lists > div').css("top", 0);
 			

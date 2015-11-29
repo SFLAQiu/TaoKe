@@ -25,32 +25,32 @@
         <table class="main" id="ipts">
             <tr>
                 <td>商品名称:</td>
-                <td><input type="text" class="form-control" name="Title"></td>
+                <td><input type="text" class="parame form-control" name="Title"></td>
             </tr>
             <tr>
                 <td>购买地址:</td>
-                <td><input type="text" class="form-control" name="BuyUrl"></td>
+                <td><input type="text" class="parame form-control" name="BuyUrl"></td>
             </tr>
             <tr>
                 <td>商品源ID:</td>
-                <td><input type="text" class="form-control" name="GoodId"></td>
+                <td><input type="text" class="parame form-control" name="GoodId"></td>
             </tr>
             <tr>
                 <td>图片地址:</td>
-                <td><input type="text" class="form-control" name="ImgUrl"></td>
+                <td><input type="text" class="parame form-control" name="ImgUrl"></td>
             </tr>
             <tr>
                 <td>原价:</td>
-                <td><input type="text" class="form-control" name="OldPrice"></td>
+                <td><input type="text" class="parame form-control" name="OldPrice"></td>
             </tr>
             <tr>
                 <td>现价:</td>
-                <td><input type="text" class="form-control" name="NowPrice"></td>
+                <td><input type="text" class="parame form-control" name="NowPrice"></td>
             </tr>
             <tr>
                 <td>商品类型:</td>
                 <td>
-                    <select class="form-control" name="Type">
+                    <select class="parame form-control" name="Type">
                         <option value="-1">无</option>
                         @{
                             var goodTypes = (List<TaoKeModel.EGoodType>)ViewBag.GoodType;
@@ -65,7 +65,7 @@
             <tr>
                 <td>商城来源:</td>
                 <td>
-                    <select class="form-control" name="SourceMall">
+                    <select class="parame form-control" name="SourceMall">
                         <option value="-1">无</option>
                         @{
                             var sourceMall = (List<TaoKeModel.ESourceMall>)ViewBag.SourceMall;
@@ -78,8 +78,18 @@
                 </td>
             </tr>
             <tr>
+                <td>是否热门:</td>
                 <td>
-                    <input  type="hidden" class="form-control" name="Id">
+                    <div class="checkbox">
+                        <label>
+                            <input class="parame" type="checkbox" name="IsHot">
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="hidden" class="parame form-control" name="Id">
                 </td>
                 <td><button type="button" id="addbtn" class="btn btn-default">GO</button></td>
             </tr>
@@ -94,7 +104,7 @@
                 var h = SFLYQ.Helper;
                 $("#addbtn").click(function () {
                     var action="@ViewBag.Action";
-                    var from_datas=h.SuperHander.GetFormValue($("#ipts .form-control"));
+                    var from_datas=h.SuperHander.GetFormValue($("#ipts .parame"));
                     console.log(from_datas);
                     $.post("/GoodInfo/"+action+"Good/", from_datas, function (data) {
                         if (!data) {
@@ -121,6 +131,7 @@
                     $("#ipts input[name='ImgUrl']").val(dataJson["ImgUrl"]);
                     $("#ipts select[name='Type']").find("option[value='" + dataJson["Type"] + "']").prop("selected",true);
                     $("#ipts select[name='SourceMall']").find("option[value='" + dataJson["SourceMall"] + "']").prop("selected", true);
+                    $("#ipts input[name='IsHot']").prop("checked", Boolean(dataJson["IsHot"])?"checked":"");
                 }
                 bindDatas();
             })();
