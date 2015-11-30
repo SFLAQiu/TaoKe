@@ -131,8 +131,8 @@ WHERE id=@Id
             id = 0;
             if (model == null) return false;
             var str = @"
-INSERT INTO GoodInfo(Title,NowPrice,OldPrice,Type,SourceMall,AddDateTime,GoodId,ImgUrl,BuyUrl,@IsHot) 
-VALUES (@Title,@NowPrice,@OldPrice,@Type,@SourceMall,@AddDateTime,@GoodId,@ImgUrl,@BuyUrl,IsHot)
+INSERT INTO GoodInfo(Title,NowPrice,OldPrice,Type,SourceMall,AddDateTime,GoodId,ImgUrl,BuyUrl,IsHot) 
+VALUES (@Title,@NowPrice,@OldPrice,@Type,@SourceMall,@AddDateTime,@GoodId,@ImgUrl,@BuyUrl,@IsHot)
 SELECT SCOPE_IDENTITY();
 ";
             SqlParameter[] parames ={

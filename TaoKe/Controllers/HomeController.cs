@@ -10,10 +10,10 @@ namespace TaoKe.Controllers {
         public ActionResult Index() {
             var bll = new BGoodInfo();
             var type = Request.GetQ("t").GetString("all");
+            if (type.IsNullOrWhiteSpace()) type = "all";
             ViewBag.GoodType = bll.GetGoodTypes();
             ViewBag.Type = type; 
             //ViewBag.SourceMall = bll.GetSourceMall();
-
             return View();
         }
     }

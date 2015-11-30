@@ -132,6 +132,8 @@
     <Content Include="Content\css\mqueries.css" />
     <Content Include="Content\css\socialicious.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\favicon.ico" />
+    <Content Include="Content\img\logo_v3.png" />
     <Content Include="Content\img\logo_zp.png" />
     <Content Include="Content\img\hot.png" />
     <Content Include="Content\img\new.png" />
@@ -158,11 +160,15 @@
     <Content Include="Content\js\vue.min.js" />
     <Content Include="datas\goods\info.js" />
     <Content Include="datas\goods\info_1_1.js" />
+    <Content Include="datas\goods\info_1_2.js" />
     <Content Include="datas\goods\info_2_1.js" />
     <Content Include="datas\goods\info_3_1.js" />
+    <Content Include="datas\goods\info_3_2.js" />
     <Content Include="datas\goods\info_4_1.js" />
     <Content Include="datas\goods\info_all_1.js" />
     <Content Include="datas\goods\info_all_2.js" />
+    <Content Include="datas\goods\info_all_3.js" />
+    <Content Include="datas\goods\info_all_4.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
