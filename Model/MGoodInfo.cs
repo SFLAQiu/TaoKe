@@ -124,7 +124,7 @@ namespace TaoKeModel {
          /// <summary>
          /// 婴幼用品
          /// </summary>
-         [EnumAttr(Text = "婴幼用品")]
+         [EnumAttr(Text = "喂养洗护")]
          articles = 3,
          /// <summary>
          /// 玩具早教

@@ -64,28 +64,28 @@
       <publishTime>11/25/2015 21:58:16</publishTime>
     </File>
     <File Include="bin/TaoKe.dll">
-      <publishTime>12/01/2015 00:55:31</publishTime>
+      <publishTime>12/01/2015 23:26:27</publishTime>
     </File>
     <File Include="bin/TaoKe.pdb">
-      <publishTime>12/01/2015 00:55:31</publishTime>
+      <publishTime>12/01/2015 23:26:27</publishTime>
     </File>
     <File Include="bin/TaoKeBLL.dll">
-      <publishTime>11/30/2015 23:11:45</publishTime>
+      <publishTime>12/01/2015 23:26:27</publishTime>
     </File>
     <File Include="bin/TaoKeBLL.pdb">
-      <publishTime>11/30/2015 23:11:45</publishTime>
+      <publishTime>12/01/2015 23:26:26</publishTime>
     </File>
     <File Include="bin/TaoKeDAL.dll">
-      <publishTime>11/30/2015 23:11:44</publishTime>
+      <publishTime>12/01/2015 23:26:26</publishTime>
     </File>
     <File Include="bin/TaoKeDAL.pdb">
-      <publishTime>11/30/2015 23:11:44</publishTime>
+      <publishTime>12/01/2015 23:26:26</publishTime>
     </File>
     <File Include="bin/TaoKeModel.dll">
-      <publishTime>11/30/2015 21:48:02</publishTime>
+      <publishTime>12/01/2015 23:26:26</publishTime>
     </File>
     <File Include="bin/TaoKeModel.pdb">
-      <publishTime>11/30/2015 21:48:02</publishTime>
+      <publishTime>12/01/2015 23:26:26</publishTime>
     </File>
     <File Include="bin/zh-Hans/System.Net.Http.Formatting.resources.dll">
       <publishTime>11/25/2015 21:58:16</publishTime>
@@ -508,37 +508,49 @@
       <publishTime>11/25/2015 21:49:40</publishTime>
     </File>
     <File Include="datas/goods/info.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_1_1.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_1_2.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_2_1.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_3_1.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_3_2.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
+    </File>
+    <File Include="datas/goods/info_3_3.js">
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_4_1.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
+    </File>
+    <File Include="datas/goods/info_5_1.js">
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_all_1.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_all_2.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_all_3.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="datas/goods/info_all_4.js">
-      <publishTime>12/01/2015 01:00:26</publishTime>
+      <publishTime>12/01/2015 23:26:22</publishTime>
+    </File>
+    <File Include="datas/goods/info_all_5.js">
+      <publishTime>12/01/2015 23:26:22</publishTime>
+    </File>
+    <File Include="datas/goods/info_all_6.js">
+      <publishTime>12/01/2015 23:26:22</publishTime>
     </File>
     <File Include="Global.asax">
       <publishTime>11/25/2015 21:49:40</publishTime>
@@ -547,7 +559,7 @@
       <publishTime>11/25/2015 21:49:40</publishTime>
     </File>
     <File Include="Views/Home/Index.cshtml">
-      <publishTime>11/30/2015 22:54:39</publishTime>
+      <publishTime>12/01/2015 22:39:44</publishTime>
     </File>
     <File Include="Views/Web.config">
       <publishTime>11/25/2015 21:49:40</publishTime>
